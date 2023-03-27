@@ -8,7 +8,7 @@ public class Obstacles : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("The Player ran into me...");
+            gameObject.tag = "Hit";
         }    
     }
 }
