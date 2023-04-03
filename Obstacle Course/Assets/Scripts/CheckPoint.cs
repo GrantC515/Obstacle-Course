@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
 
-public class SceneLoader : MonoBehaviour
+public class CheckPoint : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -18,18 +17,11 @@ public class SceneLoader : MonoBehaviour
         
     }
 
-    public void LoadStartScene()
+    private void OnCollisionEnter(Collision other) 
     {
-        SceneManager.LoadScene("Game");
-    }
-
-    public void ReplayFromGO()
-    {
-        SceneManager.LoadScene("Game");
-    }
-
-    public void ReplayFromWin()
-    {
-        SceneManager.LoadScene("Game");
+        if(other.gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene("Win Scene");
+        }
     }
 }

@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField] public float _moveSpeed = 10f;
-    [SerializeField] private float _charHealth = 5;
+    public float _charHealth = 5f;
     public TextMeshProUGUI healthText;
 
     // Start is called before the first frame update
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Movement();
+        GameOver();
     }
 
     void Movement()
@@ -46,9 +48,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void GameOver()
     {
-        if(_charHealth < 0)
+        if(_charHealth <= 0)
         {
-            Destroy(this.gameObject);
+            SceneManager.LoadScene(2);
         }
     }
 }
