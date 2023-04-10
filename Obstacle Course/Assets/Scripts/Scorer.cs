@@ -11,6 +11,7 @@ public class Scorer : MonoBehaviour
     {
         if(other.gameObject.tag != "Hit")
         {
+            other.gameObject.tag = "Hit";
             _hits++;
         }    
     }

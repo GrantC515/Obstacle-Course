@@ -20,16 +20,16 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadStartScene()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Course #1");
     }
 
     public void ReplayFromGO()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Course #1");
     }
 
     public void ReplayFromWin()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Course #1");
     }
 }
