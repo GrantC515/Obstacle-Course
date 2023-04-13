@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f1266862ae0c0464aaf1e6a30a102b70, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f1266862ae0c0464aaf1e6a30a102b70, type: 3}
       propertyPath: m_TagString
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 10
-  _charHealth: 5
+  _charHealth: 3
   healthText: {fileID: 0}
 --- !u!114 &1351253697
 MonoBehaviour:

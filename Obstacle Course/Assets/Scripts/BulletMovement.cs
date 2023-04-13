@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
+    public float moveSpeed = 20;
+    public float travelTime = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +16,8 @@ public class BulletMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+        Destroy(this.gameObject, travelTime);
     }
+
 }
